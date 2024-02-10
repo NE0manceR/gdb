@@ -1,8 +1,6 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import DGB_header from "./components/SiteHeader/SiteHeader";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Providers } from "./store/provider.jsx";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,15 +9,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <DGB_header />
-        <video loop autoPlay muted className="main_video">
-          <source src="for_website_filter.mp4" type="video/mp4" />
-          Ваш браузер не підтримує тег відео.
-        </video>
-        {children}
-      </body>
-    </html>
+    <Providers>
+      <html lang="en">
+        <body>
+          <DGB_header />
+          <video loop autoPlay muted className="main_video">
+            <source src="for_website_filter.mp4" type="video/mp4" />
+            Ваш браузер не підтримує тег відео.
+          </video>
+          {children}
+        </body>
+      </html>
+    </Providers>
   );
 }

@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 import style from "./SiteHeader.modules.css";
 import Link from "next/link";
 
@@ -16,6 +16,7 @@ export default function SiteHeader() {
         <Link className="header__link" href="/brands">
           Brand Sets
         </Link>
+
       </div>
     </header>
   );
