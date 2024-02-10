@@ -1,3 +1,7 @@
+header {
+    background-color: var(--bcg-color-light);
+}
+
 .header {
     display: flex;
     align-items: center;

@@ -1,0 +1,11 @@
+.brands {
+    padding: 40px 0;
+}
+
+.brands_header {
+    display: grid;
+    grid-template-columns: 30px repeat(5, 1fr);
+    gap: 12px;
+    padding: 10px 20px;
+    border-left: 8px solid transparent;
+}
